@@ -1,12 +1,26 @@
 .bodyholder{
-    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;
+    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;opacity:0.5;
 }
 .preview{
     min-height:400px !important;max-width:30% !important; min-width:500px !important;margin:10px 0px 10px 0px;
 }
 .cfooter{
-    height:100px !important; text-align: center !important;line-height: 100px !important;font-family: 'Risque', cursive; font-size: 36px;background-color: transparent !important;
+    height:100px !important; text-align: center !important;line-height: 100px !important;font-family: 'Risque', cursive; font-size: 36px;background-color: transparent !important;font-style: italic;
 }
-.imageholder{
-    width:78% !important;height:250px !important; margin: 0px auto !important;background-color: blue;;
+.imageholder{ 
+    width:78% !important;height:250px !important; margin: 0px auto !important;
+}
+.salepage{
+
+    height: 100% !important;width:100% !important; display: flex !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;position: absolute !important;top:0;left:0;background:linear-gradient(to bottom,#88cbda,#b2dbe3,#BBDEE6,#f1f1f1,#e4edef,#cce5ea,#acd9e2,#82cad9,#82cabd);
+}
+.salepreview{
+    width:85%;margin:0px auto;height: 85%;z-index:9;position: absolute !important;margin: 0px auto !important;
+    background: linear-gradient(to bottom,);
+}
+.saleholder{
+width:100%;height:100%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;align-items: center;
+}
+.salecard{
+    height: 350px !important; min-width:300px !important; width:45% !important;justify-content: space-around;margin-top:10px ;overflow-y: auto;
 }

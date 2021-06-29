@@ -1,0 +1,12 @@
+.bodyholder{
+    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;
+}
+.preview{
+    min-height:400px !important;max-width:30% !important; min-width:500px !important;margin:10px 0px 10px 0px;
+}
+.cfooter{
+    height:100px !important; text-align: center !important;line-height: 100px !important;font-family: 'Risque', cursive; font-size: 36px;background-color: transparent !important;
+}
+.imageholder{
+    width:78% !important;height:250px !important; margin: 0px auto !important;background-color: blue;;
+}

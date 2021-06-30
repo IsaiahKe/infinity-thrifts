@@ -1,0 +1,190 @@
+ $(document).ready(
+    function(){
+     $(".salepreview").hide();
+         $("#male").click(function(){
+             $(".salepreview").show();
+             getItems(male);
+             $("#phead").text('Male');
+             for(let i=0;i<show.length;i++){
+                $(".saleholder").append('<div class="card salecard">'+
+                      '<div class="row">'+
+                          '<div class="col-3 image">'+
+                              '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                          '</div>'+
+                         '<div class="col-8 card info">'+
+                              '<div class="card-body ccontent">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                              '<div class="card-footer ccontent">'+
+                                  '<div class="btn btn-primary" id="'+show[i].id+'">Order</div>'+
+                              '</div>'+
+                          '</div>'+
+                      '</div>'+
+                  '</div>');
+                }
+         });
+         $("#female").click(function(){
+             $(".salepreview").show();
+             getItems(female);
+             $("#phead").text('Female');
+             for(let i=0;i<show.length;i++){
+                $(".saleholder").append('<div class="card salecard">'+
+                '<div class="row">'+
+                    '<div class="col-3 image">'+
+                        '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                    '</div>'+
+                   '<div class="col-8 card info">'+
+                        '<div class="card-body">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                        '<div class="card-footer ccontent">'+
+                            '<div class="btn btn-primary" id=\"show[i].id\">Order</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>');
+                }
+         });
+         $("#kids").click(function(){
+             $(".salepreview").show();
+             getItems(kids);
+             $("#phead").text('Kids');
+             for(let i=0;i<show.length;i++){
+                $(".saleholder").append('<div class="card salecard">'+
+                '<div class="row">'+
+                    '<div class="col-3 image">'+
+                        '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                    '</div>'+
+                   '<div class="col-8 card info">'+
+                        '<div class="card-body">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                        '<div class="card-footer ccontent">'+
+                            '<div class="btn btn-primary" id=\"show[i].id\">Order</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>');
+                }
+         });
+         $("#bags").click(function(){
+             $(".salepreview").show();
+
+             getItems(bags);
+             $("#phead").text('Bags');
+             for(let i=0;i<show.length;i++){
+                $(".saleholder").append('<div class="card salecard">'+
+                '<div class="row">'+
+                    '<div class="col-3 image">'+
+                        '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                    '</div>'+
+                   '<div class="col-8 card info">'+
+                        '<div class="card-body">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                        '<div class="card-footer ccontent">'+
+                            '<div class="btn btn-primary" id=\"show[i].id\">Order</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>');
+                }
+         });
+         $("#atheisure").click(function(){
+             $(".salepreview").show();
+             getItems(athleisure);
+             $("#phead").text('Athleisure');
+             for(let i=0;i<show.length;i++){
+                $(".saleholder").append('<div class="card salecard">'+
+                '<div class="row">'+
+                    '<div class="col-3 image">'+
+                        '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                    '</div>'+
+                   '<div class="col-8 card info">'+
+                        '<div class="card-body">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                        '<div class="card-footer ccontent">'+
+                            '<div class="btn btn-primary" id=\"show[i].id\">Order</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+            '</div>');
+                }
+         });
+         $("#shoes").click(function(){
+             $(".salepreview").show();
+             getItems(shoes);
+             $("#phead").text('Shoes');
+             for(let i=0;i<show.length;i++){
+              $(".saleholder").append('<div class="card salecard">'+
+              '<div class="row">'+
+                  '<div class="col-3 image">'+
+                      '<img src="group-Images/'+show[i].image+'" alt="suit" height="100%" width="100%">'+
+                  '</div>'+
+                 '<div class="col-8 card info">'+
+                      '<div class="card-body">Name:'+show[i].name+'<br/> Price:'+show[i].price+' '+' per bale</div>'+
+                      '<div class="card-footer ccontent">'+
+                          '<div class="btn btn-primary" id=\"show[i].id\">Order</div>'+
+                      '</div>'+
+                  '</div>'+
+              '</div>'+
+          '</div>');
+              }
+         });
+         $(".btn-danger").click(
+             function(){
+                 $(".salepreview").fadeOut();
+                 $(".saleholder").text('');
+                 show=[];
+             }
+         );
+    }
+
+ );
+function Item(name,price,image,id){
+    this.name=name;
+    this.price=price;
+    this.image=image;
+    this.id=id;
+}
+var female1=new Item("skirts",9000,"skirts.jpeg","skirts");
+var female2= new Item("dress",8500,"dress.jpeg","dress");
+var female3=new Item("trouser",8900,"trouser.jpeg","trouser");
+var female4 =new Item("top",9500,"female.jpeg","top");
+var female=[female1,female2,female3,female4];
+
+ var male1=new Item("short",9000,"shorts.jpeg","short");
+ var male2= new Item("shirts",8500,"shirts.jpeg","shirt");
+ var male3=new Item("trouser",8900,"trouser.jpeg","trouser");
+ var male4 =new Item("vest",9500,"vests.jpeg","vest");
+
+ var male=[male1,male2,male3,male4];
+
+ var shoe1=new Item("boots",9000,"boots.jpg","boots");
+ var shoe2= new Item("sneakers",8500,"sneakers.jpg","sneakers");
+ var shoe3=new Item("clogs",8900,"clogs.jpg","clogs");
+ var shoe4 =new Item("sandals",9500,"sandals.png","sandals");
+
+ var shoes=[shoe1,shoe2,shoe3,shoe4];
+
+ var bag1=new Item("backpack",9000,"backpack.jpg","backpack");
+ var bag2= new Item("beltbag",8500,"beltbag.jpg","beltbag");
+ var bag3=new Item("leather",8900,"leather.jpg","leather");
+ var bag4 =new Item("satchel",9500,"satchel.jpg","satchel");
+
+ var bags=[bag1,bag2,bag3,bag4];
+
+ var athleisure1=new Item("atheleisureshoes",9000,"atheleisureshoes.jpeg","atheleisureshoes");
+ var athleisure2= new Item("suit",8500,"suit.jpg","suit");
+ var athleisure3=new Item("athleisureshirt",8900,"athleisureshirt.jpeg","athleisureshirt");
+ var athleisure4 =new Item("athleisureshirt",9500,"athleisureshirt.jpeg","athleisureshirt");
+ var athleisure=[athleisure1,athleisure2,athleisure3,athleisure4];
+
+ var kids1=new Item("dungaree",9000,"dungaree.jpeg","dungaree");
+ var kids2= new Item("girltops",8500,"girltops.jpeg","girltops");
+ var kids3=new Item("kiddress",8900,"kiddress.jpg","kiddress");
+ var kids4 =new Item("kidsshorts",9500,"kidsshorts.jpg","kidsshorts");
+var kids=[kids1,kids2,kids3,kids4];
+var show=[]
+
+function getItems(arrayName){
+    clearShow();
+     for(let i=0;i<arrayName.length;i++){
+        show.push(arrayName[i]);
+     }
+}
+function clearShow(){
+    show=[];
+    return show;
+}

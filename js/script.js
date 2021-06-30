@@ -1,31 +1,27 @@
+var order = [];
 $(document).ready(
     function () {
         $(".salepreview").hide();
-        $("cart").text(order.length);
+        $(".cart").text(order.length);
         $("#male").click(function () {
             $(".salepreview").show();
             getItems(male);
             $("#phead").text('Male');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
-                    '<div class="card-body ccontent">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
-                    '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+ show[i].id +'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
-                    $("#" + show[i].id).click(
-                        function () {
-                            order.push(show[i]);
-                            $("#cart").text(order.length);
-                        }
-                    );
+                '<div class="row"><div class="col-3 image">' +
+                '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">'+
+                '</div>' +'<div class="col-8 card info">' +
+                '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
+                '<div class="card-footer ccontent">' +
+                '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
+                '</div></div></div></div>');
+                $("#" + show[i].id).click(
+                    function () {
+                        order.push(show[i]);
+                        $("#cart").text(order.length);
+                    }
+                );
             };
 
         });
@@ -35,24 +31,19 @@ $(document).ready(
             $("#phead").text('Female');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
-                    '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
-                    '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
-                    $("#" + show[i].id).click(
-                        function () {
-                            order.push(show[i]);
-                            $("#cart").text(order.length);
-                        }
-                    );
+                '<div class="row"><div class="col-3 image">' +
+                '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">'+
+                '</div>' +'<div class="col-8 card info">' +
+                '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
+                '<div class="card-footer ccontent">' +
+                '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
+                '</div></div></div></div>');
+                $("#" + show[i].id).click(
+                    function () {
+                        order.push(show[i]);
+                        $("#cart").text(order.length);
+                    }
+                );
             }
         });
         $("#kids").click(function () {
@@ -61,24 +52,19 @@ $(document).ready(
             $("#phead").text('Kids');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
-                    '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
-                    '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
-                    $("#" + show[i].id).click(
-                        function () {
-                            order.push(show[i]);
-                            $("#cart").text(order.length);
-                        }
-                    );
+                '<div class="row"><div class="col-3 image">' +
+                '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">'+
+                '</div>' +'<div class="col-8 card info">' +
+                '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
+                '<div class="card-footer ccontent">' +
+                '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
+                '</div></div></div></div>');
+                $("#" + show[i].id).click(
+                    function () {
+                        order.push(show[i]);
+                        $("#cart").text(order.length);
+                    }
+                );
             }
         });
         $("#bags").click(function () {
@@ -88,24 +74,19 @@ $(document).ready(
             $("#phead").text('Bags');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
+                    '<div class="row"><div class="col-3 image">' +
                     '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
+                    '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
-                    $("#" + show[i].id).click(
-                        function () {
-                            order.push(show[i]);
-                            $("#cart").text(order.length);
-                        }
-                    );
+                    '<div class="btn btn-primary" id=' + show[i].id + '>Order</div>' +
+                    '</div></div></div></div>');
+                $("#" + show[i].id).click(
+                    function () {
+                        order.push(show[i]);
+                        $("#cart").text(order.length);
+                    }
+                );
             }
         });
         $("#atheisure").click(function () {
@@ -114,24 +95,19 @@ $(document).ready(
             $("#phead").text('Athleisure');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
+                    '<div class="row"><div class="col-3 image">' +
                     '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
+                    '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
-                    $("#" + show[i].id).click(
-                        function () {
-                            order.push(show[i]);
-                            $("#cart").text(order.length);
-                        }
-                    );
+                    '<div class="btn btn-primary" id=' + show[i].id + '>Order</div>' +
+                    '</div></div></div></div>');
+                $("#" + show[i].id).click(
+                    function () {
+                        order.push(show[i]);
+                        $("#cart").text(order.length);
+                    }
+                );
             }
         });
         $("#shoes").click(function () {
@@ -140,18 +116,13 @@ $(document).ready(
             $("#phead").text('Shoes');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row">' +
-                    '<div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
-                    '</div>' +
-                    '<div class="col-8 card info">' +
-                    '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
-                    '<div class="card-footer ccontent">' +
-                    '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>');
+                '<div class="row"><div class="col-3 image">' +
+                '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">'+
+                '</div>' +'<div class="col-8 card info">' +
+                '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
+                '<div class="card-footer ccontent">' +
+                '<div class="btn btn-primary" id='+show[i].id+'>Order</div>' +
+                '</div></div></div></div>');
                 $("#" + show[i].id).click(
                     function () {
                         order.push(show[i]);
@@ -217,7 +188,7 @@ var kids3 = new Item("kiddress", 8900, "kiddress.jpg", "kiddress");
 var kids4 = new Item("kidsshorts", 9500, "kidsshorts.jpg", "kidsshorts");
 var kids = [kids1, kids2, kids3, kids4];
 var show = [];
-var order = [];
+
 
 function getItems(arrayName) {
     clearShow();

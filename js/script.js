@@ -16,21 +16,24 @@ $(document).ready(
             function () {
                 $(".cartitems").fadeOut();
                 $(".cover").fadeOut();
+        
             }
         );
         $(".cart").click(
             function () {
+                
                 $(".cartitems").fadeIn();
                 $(".cover").fadeIn();
-                $(".cartItems").text("");
+                $("#cartitems").text("");
                 if(order.length<1){
-                    $(".cartitems").append('<div class="card itemdiv"><div class="ccontent">'+
-                    '<h2>Oops The cart is empty<h2>'+
-                    '</div></div>')
+                    
+                    $("#cartitems").append('<div class="card itemdiv"><div class="ccontent">'+
+                    '<h2>Oops The cart is empty<h2>'+'</div></div>');
                 }
                else if(order.length>0){
+               $('#cartitems').text('');
                 for(let i=0;i<order.length;i++){
-                    $(".cartitems").append('<div class="card itemdiv"><div class="col-11">'+order[i].name+'</div></div>');
+                    $("#cartitems").append('<div class="card itemdiv"><div class="col-11">'+order[i].name+'</div></div>');
                 }
                }
             }

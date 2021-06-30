@@ -1,5 +1,5 @@
 .bodyholder{
-    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;opacity:0.5;
+    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;
 }
 .preview{
     min-height:400px !important;max-width:30% !important; min-width:500px !important;margin:10px 0px 10px 0px;
@@ -15,12 +15,6 @@
     height: 100% !important;width:100% !important; display: flex !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;position: absolute !important;top:0;left:0;background:linear-gradient(to bottom,#88cbda,#b2dbe3,#BBDEE6,#f1f1f1,#e4edef,#cce5ea,#acd9e2,#82cad9,#82cabd);
 }
 .salepreview{
-    width:85%;margin:0px auto;height: 85%;z-index:9;position: absolute !important;margin: 0px auto !important;
+    width:85%;margin:0px auto;height: 90%;z-index:9;position: absolute !important;margin: 0px auto !important;
     background: linear-gradient(to bottom,#18adce,#2eb4d2,#7ed1e3,#b8e6f0,#f4fbfd,#ffffff,#ffffff);
-}
-.saleholder{
-width:100%;height:100%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;align-items: center;overflow-y: auto;
-}
-.salecard{
-    height: 350px !important; min-width:300px !important; width:45% !important;justify-content: space-around;margin-top:10px ;background: transparent;opacity:0.5;
 }

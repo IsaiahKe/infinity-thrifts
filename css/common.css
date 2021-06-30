@@ -1,9 +1,9 @@
 /* Links */
 a,
 a:focus,
-a:hover {
+/*a:hover {
   color:#18ACCD;
-}
+}*/
 
 /* Custom default button */
 .btn-secondary,

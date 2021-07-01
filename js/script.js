@@ -190,11 +190,12 @@ $(document).ready(
                 $(".saleholder").text('');
                 show = [];
             }
+
         );
 
+    
+
     }
-
-
 );
 //BLOC section
 function Item(name, price, image, id) {
@@ -255,3 +256,5 @@ function clearShow() {
     return show;
 }
 //function to add items to cart
+
+

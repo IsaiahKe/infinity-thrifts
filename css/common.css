@@ -1,9 +1,9 @@
 /* Links */
 a,
 a:focus,
-a:hover {
+/*a:hover {
   color:#18ACCD;
-}
+}*/
 
 /* Custom default button */
 .btn-secondary,
@@ -25,6 +25,7 @@ a:hover {
    height: 100%;
    background-color:#18ACCD;/* For browsers that do not support gradients */
    background-image: linear-gradient(0deg, #18ACCD, white);
+   
  }
  
  body {

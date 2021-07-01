@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="home.css">
-    <script src="js/jquery-ui.js"></script>
+    
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +45,15 @@
                         <div class="col-1 btn btn-danger" id="cpay">X</div>
                     </div>
                 </div>
-                <div class="card-body"></div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead class="thead"><tr><th scope="col">Entry</th><th scope="col">Item</th><th scope="col">Specification</th><th scope="col">Total</th></tr></thead>
+                        <tbody id="items"></tbody>
+                        <tfoot id="total">
+                            
+                        </tfoot>
+                    </table>
+                </div>
                 <div class="card-footer ccontent">
                     <div class="btn btn-primary">
                         PAY

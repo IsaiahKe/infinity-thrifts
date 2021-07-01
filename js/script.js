@@ -1,4 +1,5 @@
 var order = [];
+var cart=[];
 //UI
 $(document).ready(
     function () {
@@ -32,15 +33,16 @@ $(document).ready(
                 }
                 else if (order.length > 0) {
                     $('#cartitems').text('');
-                    for (let i = 0; i < order.length; i++) {
-                        $("#cartitems").append('<div class="card itemdiv"><div class="row"><div class="col-11">' + order[i].name + '</div><div class="col-1 btn btn-danger" id=' + order[i].id + '>X</div></div></div>');
-                        $("#" + order[i].id).click(
-                            function () {
-                                order.splice(order[i], 1);
-                                $("#cart").text(order.length);
-                                $("#cartItems").load('home.html');
-                            });
+                    let i=0;
+                    do{
+                         $("#cartitems").append('<div class="card itemdiv"><div class="row"><div class="col-10">' + order[i].name + '</div><div class="col-1 btn btn-danger justify-end" id=' + order[i].id + '>X</div></div></div>');
+                        cart.push(order[i]);
+                            i++;
                     }
+                    while ( i < order.length)
+                   console.log(cart);
+                    
+                    
                 }
             }
         );
@@ -60,7 +62,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -82,7 +84,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -103,7 +105,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -125,7 +127,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -146,7 +148,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -167,7 +169,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="suit" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +

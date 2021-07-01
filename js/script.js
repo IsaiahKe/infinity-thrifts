@@ -1,5 +1,5 @@
 var order = [];
-var cart=[];
+var cart = [];
 //UI
 $(document).ready(
     function () {
@@ -33,16 +33,18 @@ $(document).ready(
                 }
                 else if (order.length > 0) {
                     $('#cartitems').text('');
-                    let i=0;
-                    do{
-                         $("#cartitems").append('<div class="card itemdiv"><div class="row"><div class="col-10">' + order[i].name + '</div><div class="col-1 btn btn-danger justify-end" id=' + order[i].id + '>X</div></div></div>');
+                    let i = 0;
+                    do {
+                        $("#cartitems").append('<div class="card itemdiv">' +
+                        '<div class="row"><div class="col-3 hcontent">Name:</div><div class="col-3 hcontent">Price:</div><div class="col-3"></div><div class="col-2">'+
+                        '<div class="col-3 btn btn-danger justify-end" id=' + order[i].id + '>X</div></div></div><div class="row"><div class="col-3">' + order[i].name + '</div><div class="col-3">' + order[i].price + 'KSh/ bale</div><div class="col-3"></div></div></div>');
                         cart.push(order[i]);
-                            i++;
+                        i++;
                     }
-                    while ( i < order.length)
-                   console.log(cart);
-                    
-                    
+                    while (i < order.length)
+                    console.log(cart);
+
+
                 }
             }
         );
@@ -51,9 +53,9 @@ $(document).ready(
                 $(".pay").fadeIn()
             });
         $("#cpay").click(
-            function() { 
+            function () {
                 $(".pay").fadeOut();
-             }
+            }
         );
         $("#male").click(function () {
             $(".salepreview").show();
@@ -62,7 +64,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -84,7 +86,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -105,7 +107,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -127,7 +129,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -148,7 +150,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -169,7 +171,7 @@ $(document).ready(
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
                     '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="'+show[i].name+'" height="100%" width="100%">' +
+                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
                     '</div>' + '<div class="col-8 card info">' +
                     '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
                     '<div class="card-footer ccontent">' +
@@ -193,7 +195,7 @@ $(document).ready(
 
         );
 
-    
+
 
     }
 );

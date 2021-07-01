@@ -1,5 +1,4 @@
 var order = [];
-var cart = [];
 //UI
 $(document).ready(
     function () {
@@ -33,25 +32,47 @@ $(document).ready(
                 }
                 else if (order.length > 0) {
                     $('#cartitems').text('');
-                    let i = 0;
-                    do {
-                        $("#cartitems").append('<div class="card itemdiv">' +
-                        '<div class="row"><div class="col-3 hcontent">Name:</div><div class="col-3 hcontent">Price:</div><div class="col-3"></div><div class="col-2">'+
-                        '<div class="col-3 btn btn-danger justify-end" id=' + order[i].id + '>X</div></div></div><div class="row"><div class="col-3">' + order[i].name + '</div><div class="col-3">' + order[i].price + 'KSh/ bale</div><div class="col-3"></div></div></div>');
-                        cart.push(order[i]);
-                        i++;
+
+                    for (let i = 0; i < order.length; i++) {
+                        $("#cartitems").append('<div class="card itemdiv" id=' + order[i].id + i + "b" + '>' +
+                            '<div class="row"><div class="col-3 hcontent">Name:</div><div class="col-3 hcontent">Price:</div><div class="col-3"></div><div class="col-2">' +
+                            '<div class="col-3 btn btn-danger justify-end" click=me(' + order[i].id + ') id=' + order[i].id + '>X</div></div></div><div class="row"><div class="col-3">' + order[i].name + '</div><div class="col-3">' + order[i].price + ' KSh/ bale</div><div class="col-3"></div></div></div>');
+                        let a = (order[i].id) + i + "b";
+                        let b = i;
+                        me(a, b);
                     }
-                    while (i < order.length)
-                    console.log(cart);
-
-
+                    function me(id, i) {
+                        $("#" + id).click(function () {
+                            $(this).hide();
+                            rem(order, i)
+                        });
+                    }
+                    function rem(ar, i) {
+                        ar.splice(ar[i], 1);
+                        $("#cart").text(ar.length);
+                        console.log(ar);
+                    }
                 }
             }
         );
         $("#check").click(
             function () {
                 $(".pay").fadeIn()
+                $("#items").text('');
+                $('#total').text('');
+                for (let i = 0; i < order.length; i++) {
+                    $("#items").append('<tr><th scope="row">' + i + '</th><td>' + order[i].name + '</td><td><input type="text"></td><td>' + order[i].price + '</td></tr>');
+                };
+                $("#total").append('<tr><th scope="row">Total</th><td></td><td></td><th>Ksh' + sum(order) + '</th></tr>');
+
             });
+        function sum(ar) {
+            let total = 0;
+            for (let i = 0; i < ar.length; i++) {
+                total = total + ar[i].price;
+            }
+            return total;
+        }
         $("#cpay").click(
             function () {
                 $(".pay").fadeOut();
@@ -106,11 +127,7 @@ $(document).ready(
             $("#phead").text('Kids');
             for (let i = 0; i < show.length; i++) {
                 $(".saleholder").append('<div class="card salecard">' +
-                    '<div class="row"><div class="col-3 image">' +
-                    '<img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%">' +
-                    '</div>' + '<div class="col-8 card info">' +
-                    '<div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div>' +
-                    '<div class="card-footer ccontent">' +
+                    '<div class="row"><div class="col-3 image"><img src="group-Images/' + show[i].image + '" alt="' + show[i].name + '" height="100%" width="100%"></div>' + '<div class="col-8 card info">div class="card-body">Name:' + show[i].name + '<br/> Price:' + show[i].price + ' ' + ' per bale</div><div class="card-footer ccontent">' +
                     '<div class="btn btn-primary" id=' + show[i].id + '>Order</div>' +
                     '</div></div></div></div>');
                 $("#" + show[i].id).click(
@@ -194,7 +211,6 @@ $(document).ready(
             }
 
         );
-
 
 
     }

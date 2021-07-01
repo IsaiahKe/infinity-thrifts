@@ -11,6 +11,7 @@ $(document).ready(function () {
             },
             PASSWORD: {
                 required: true,
+                minlength:6,
             }
         },
         messages : {
@@ -23,6 +24,7 @@ $(document).ready(function () {
             },
             PASSWORD: {
                 required: "Password is required",
+                minlength:"The password should have atleast six characters/digits",
             }
             },
         submitHandler:function(form){

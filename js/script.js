@@ -4,8 +4,9 @@ $(document).ready(
     function () {
         $(".salepreview").hide();
         $(".cart").text(order.length);
-         $(".cartitems").hide();
+        $(".cartitems").hide();
         $(".cover").hide();
+        $(".pay").hide();
         $(".cover").click(
             function () {
                 $(".cartitems").fadeOut();
@@ -16,27 +17,41 @@ $(document).ready(
             function () {
                 $(".cartitems").fadeOut();
                 $(".cover").fadeOut();
-        
             }
         );
         $(".cart").click(
             function () {
-                
+
                 $(".cartitems").fadeIn();
                 $(".cover").fadeIn();
                 $("#cartitems").text("");
-                if(order.length<1){
-                    
-                    $("#cartitems").append('<div class="card itemdiv"><div class="ccontent">'+
-                    '<h2>Oops The cart is empty<h2>'+'</div></div>');
+                if (order.length < 1) {
+
+                    $("#cartitems").append('<div class="card itemdiv"><div class="ccontent">' +
+                        '<h2>Oops The cart is empty<h2>' + '</div></div>');
                 }
-               else if(order.length>0){
-               $('#cartitems').text('');
-                for(let i=0;i<order.length;i++){
-                    $("#cartitems").append('<div class="card itemdiv"><div class="col-11">'+order[i].name+'</div></div>');
+                else if (order.length > 0) {
+                    $('#cartitems').text('');
+                    for (let i = 0; i < order.length; i++) {
+                        $("#cartitems").append('<div class="card itemdiv"><div class="row"><div class="col-11">' + order[i].name + '</div><div class="col-1 btn btn-danger" id=' + order[i].id + '>X</div></div></div>');
+                        $("#" + order[i].id).click(
+                            function () {
+                                order.splice(order[i], 1);
+                                $("#cart").text(order.length);
+                                $("#cartItems").load('home.html');
+                            });
+                    }
                 }
-               }
             }
+        );
+        $("#check").click(
+            function () {
+                $(".pay").fadeIn()
+            });
+        $("#cpay").click(
+            function() { 
+                $(".pay").fadeOut();
+             }
         );
         $("#male").click(function () {
             $(".salepreview").show();

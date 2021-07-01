@@ -24,7 +24,11 @@ $(document).ready(function () {
             PASSWORD: {
                 required: "Password is required",
             }
-            }
+            },
+        submitHandler:function(form){
+            window.location="home.html";
+        }
     });
+
 
 });

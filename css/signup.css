@@ -5,9 +5,7 @@ body{
     font-family:'Risque', cursive;
     
 }
-.holder{
-    height: 100% !important;width:100% !important; display: flex !important;flex-wrap: wrap !important;justify-content: center;align-items: center !important;position: absolute !important;top:0;left:0;background:linear-gradient(to bottom,#88cbda,#b2dbe3,#BBDEE6,#f1f1f1,#e4edef,#cce5ea,#acd9e2,#82cad9,#82cabd);overflow-y: auto;padding-top:10px;
-}
+
 h1{
     
     text-align: center; 

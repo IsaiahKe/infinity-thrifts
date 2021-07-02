@@ -1,8 +1,12 @@
 body{
-    background-image: url(/group-Images/signback.jpg);
+    background-image: url(group-Images/signback.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family:'Risque', cursive;
+    
+}
+.holder{
+    height: 100% !important;width:100% !important; display: flex !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;position: absolute !important;top:0;left:0;background:linear-gradient(to bottom,#88cbda,#b2dbe3,#BBDEE6,#f1f1f1,#e4edef,#cce5ea,#acd9e2,#82cad9,#82cabd);overflow-y: auto;padding-top:10px;
 }
 h1{
     
@@ -26,15 +30,12 @@ a{
     color: white;
 }
 .box {
-    margin-bottom: 20px;
+    
     width: 500px;
     padding: 40px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    margin:0px auto;
     background:rgba(128, 128, 128, 0.5);
     transition: 0.25s;
-    margin-top: 100px;
-    margin-bottom: 20px;
   
 }

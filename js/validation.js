@@ -1,6 +1,5 @@
 $(document).ready(function () {
-
-    $('#loginForm').validate({ // initialize the plugin
+    $('#loginForm').validate({
         rules: {
             NAME: {
                 required: true,
@@ -31,6 +30,4 @@ $(document).ready(function () {
             window.location="index.html";
         }
     });
-
-
 });

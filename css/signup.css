@@ -39,3 +39,11 @@ a{
     transition: 0.25s;
   
 }
+.error{
+    line-height: 1;
+    color: red;
+    padding: 2px 0 6px 6px;
+    }
+    input.valid.success-alert {
+    color: green;
+    }

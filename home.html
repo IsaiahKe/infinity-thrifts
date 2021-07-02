@@ -14,8 +14,126 @@
     <title>Home Page</title>
 </head>
 
-<body>
+<body><!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="home.css">
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+    </head>
+    
+    <body>
+        <div class="container-fluid salepage" id="salepage">
+            
+            <div class="container-fluid nav">
+                
+                <div class="col-11">
+                    <a href="index.html" class="btn btn-primary m-2">Home</a>
+                </div>
+                <div class="col-1">
+                    <div class="cart" id="cart">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card salepreview">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-11 hconent">
+                                <h4><span id="phead"></span> Products Details </h4>
+                            </div>
+                            <div class="col-1 btn btn-danger">X</div>
+                        </div>
+                    </div>
+                    <div class="saleholder">
+                    </div>
+                </div>
+                <div class="card pay">
+                    <div class="card-header ccontent">
+                        <div class="row">
+                            <div class="col-11">
+                                <h3>Cart Items summary</h3>
+                            </div>
+                            <div class="col-1 btn btn-danger" id="cpay">X</div>
+                        </div>
+                    </div>
+                    <div class="card-body"></div>
+                    <div class="card-footer ccontent">
+                        <div class="btn btn-primary">
+                            PAY
+                        </div>
+                    </div>
+                </div>
+                <div class="cover"></div>
+                <div class="card cartitems">
+                    <div class="card-header ccontent">
+                        <div class="row">
+                            <div class="col-11">
+                                <h3>Checkout Items</h3>
+                            </div>
+                            <div class="col-1 btn btn-danger" id="exit">X</div>
+                        </div>
+                    </div>
+                    <div class="card-body" id="cartitems"></div>
+                    <div class="card-footer ccontent">
+                        <div class="btn btn-primary" id="check">
+                            CHECKOUT
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid bodyholder" id="homepage">
+                    <div class="card preview" id="female">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/female.jpeg" alt="female sample" height="230px" width="300px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Female Clothes</span></div>
+                    </div>
+                    <div class="card preview" id="male">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/male.jpg" alt="Male sample" height="230px" width="300px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Male Clothes</span></div>
+                    </div>
+                    <div class="card preview" id="kids">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/kids.jpeg" alt=" kids sample" height="230px" width="300px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Kids Clothes</span></div>
+                    </div>
+                    <div class="card preview" id="shoes">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/shoes.jpg" alt="shoes sample" height="230px" width="300px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Shoes</span></div>
+                    </div>
+                    <div class="card preview" id="bags">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/Qali-bags.jpg" alt="bags sample" height="230px" width="300px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Bags</span></div>
+                    </div>
+                    <div class="card preview" id="atheisure">
+                        <div class="card-body imageholder">
+                            <img src="group-Images/atheisure.jpeg" alt="Athleisure sample" height="230px" width="250px">
+                        </div>
+                        <div class="card-footer cfooter"><span class="">Athleisure</span></div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    </html>
     <div class="container-fluid salepage" id="salepage">
+        
         <div class="container-fluid nav">
             <div class="col-11"></div>
             <div class="col-1">

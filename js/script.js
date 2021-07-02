@@ -72,17 +72,6 @@ $(document).ready(
             for(let i=0;i<ar.length;i++){
                 total=total+ar[i].price;
 
-                /*for (let i = 0; i < order.length; i++) {
-                    $("#items").append('<tr><th scope="row">' + i + '</th><td>' + order[i].name + '</td><td><input type="text"></td><td>' + order[i].price + '</td></tr>');
-                };
-                $("#total").append('<tr><th scope="row">Total</th><td></td><td></td><th>Ksh' + sum(order) + '</th></tr>');
-
-            });
-        function sum(ar) {
-            let total = 0;
-            for (let i = 0; i < ar.length; i++) {
-                total = total + ar[i].price;*/
-
             }
             return total;
         }

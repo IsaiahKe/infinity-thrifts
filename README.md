@@ -8,7 +8,7 @@ This is a simple web application on ecommerce. The site uses purely js to make i
 The project will make use of jquery library to make the page dynamic and more responsive with bootstrap
 
 ## Deployment
-  [see live site](https://becka7.github.io/infinity/)
+  [see live site](https://isaiahke.github.io/infinity-thrifts/)
 
 ## Installation
 To instal this work for your personal use, follow these steps  
@@ -22,7 +22,9 @@ To instal this work for your personal use, follow these steps
 
 ## Technology
  1. CSS  
- 2. Jquery library   
+ 2. Jquery library  
+ 3. HTML  
+ 4. JQUERY-UI
 
 ## License
 The software is free of use to all users and am not liable for any damage thta may be caused  by software

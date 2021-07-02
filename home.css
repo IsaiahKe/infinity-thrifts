@@ -1,0 +1,67 @@
+.bodyholder{
+    height: 100% !important;width:100% !important; display: flex !important;flex-direction: row !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;
+}
+.preview{
+    min-height:380px !important;max-width:30% !important; min-width:500px !important;margin:10px 0px 10px 0px;
+}
+.nav{
+    height:60px !important;background-color: aliceblue !important;width: 100% !important;z-index:5 !important;position: fixed; top: 0 !important;
+}
+.cfooter{
+    height:50px !important; text-align: center !important;line-height: 50px !important;font-family: 'Risque', cursive; font-size: 36px;background-color: transparent !important;font-style: italic;
+}
+.imageholder{ 
+    width:78% !important;height:250px !important; margin: 0px auto !important;
+}
+.salepage{
+
+    height: 100% !important;width:100% !important; display: flex !important;flex-wrap: wrap !important;justify-content: space-around;align-items: center !important;position: absolute !important;top:0;left:0;background:linear-gradient(to bottom,#88cbda,#b2dbe3,#BBDEE6,#f1f1f1,#e4edef,#cce5ea,#acd9e2,#82cad9,#82cabd);overflow-y: auto;padding-top:10px;
+}
+.salepreview{
+    width:85%;margin:0px auto;height: 90%;z-index:9;position: absolute !important;margin: 0px auto !important;
+    background: linear-gradient(to bottom,#18adce,#2eb4d2,#7ed1e3,#b8e6f0,#f4fbfd,#ffffff,#ffffff);
+    top:4%;
+}
+.saleholder{
+width:100%;height:100%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;align-items: center;overflow-y: auto;
+}
+.salecard{
+    min-height: 300px !important; min-width:300px !important; width:45% !important;justify-content: space-around;margin-top:5px ;background: transparent;
+}
+.card-header{
+    height:50px !important;text-align: center !important;
+}
+.image{
+    min-height:180px !important;min-width:180px !important;
+}
+.info{
+    height:100% !important;min-width:110px !important;max-width:400px !important; border: none !important;font-family: 'Risque', cursive;
+}
+.ccontent{
+    text-align: center !important;background: transparent !important; border:none !important;font-family: 'Risque', cursive;font-weight: bold;
+}
+.hcontent{
+    font-weight: bold;font-family: 'Risque',cursive;
+}
+::selection{
+   
+    background-color: transparent !important;
+}
+.cart{
+    height:50px;width:50px;color:red;background-image: url('group-Images/cart.png'); border-radius: 50%;text-align: center;background-repeat: no-repeat;background-size: contain;cursor: pointer;
+}
+.cartitems{
+    min-height:500px !important;max-height:650px;max-width:1000px !important;z-index: 15 !important;display: flex;flex-direction: column;position:absolute !important;top:5%;left:20%;min-width:400px !important;overflow-y:auto !important;
+}
+.cover{
+    height:90%;width: 100%;position: absolute;opacity: 0.5;background-color: #f0f0f0;z-index:13;cursor:progress;
+}
+.itemdiv{
+    height:70px !important;width:100% !important;background-color:#82cad9 !important; margin-bottom:5px !important;
+}
+.pay{
+    min-height:500px !important;max-height:650px;max-width:1000px !important;z-index: 20 !important;display: flex;flex-direction: column;position:absolute !important;top:5%;left:20%;min-width:400px !important;overflow:auto !important;
+}
+.justify-end{
+    justify-content: end !important;align-items: center !important; width:80% !important;
+}

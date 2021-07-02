@@ -32,6 +32,7 @@ The software is free of use to all users and am not liable for any damage thta m
   ##### [IsaiahKe](github.com/IsaiahKe)
   ##### [Rebecca Nzau](github.com/Becka7)
   ##### [Victoria Wasonga](github.com/vokumu)
+  ##### [Margaret Waweru](github.com/magiewech)
 
   
 ## Copyright
